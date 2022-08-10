@@ -9,7 +9,7 @@ export default class Character implements Fighter {
   private _dexterity: number = getRandomInt(1, 10);
   private _race: Race = new Elf(this._name, this._dexterity);
   private _archetype: Archetype = new Mage(this._name);
-  private _maxLifePoints: number = this.race.maxLifePoints / 2;
+  private _maxLifePoints: number = this._race.maxLifePoints / 2;
   private _lifePoints: number = this._maxLifePoints;
   private _strength: number = getRandomInt(1, 10);
   private _defense: number = getRandomInt(1, 10);
