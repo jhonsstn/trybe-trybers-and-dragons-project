@@ -45,10 +45,7 @@ export default class Character implements Fighter {
   }
 
   get energy(): Energy {
-    return {
-      type_: this._energy.type_,
-      amount: this._energy.amount,
-    };
+    return { ...this._energy };
   }
 
   receiveDamage(attackPoints: number): number {
