@@ -8,7 +8,7 @@ export default class PVP extends Battle {
 
   fight(): number {
     let winner = 0;
-    for (let i = 0; i < 3; i += 1) {
+    while (winner === 0) {
       this.player.attack(this.playerTwo);
       if (this.playerTwo.lifePoints === -1) {
         winner = 1;
